@@ -1,12 +1,31 @@
 package com.java.assyl.tictactoe;
 
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  * @Assylzhan Baimuratov
  **/
 public class Game {
+    private final DataPrinter dataPrinter;
+    private final ComputerMove computerMove;
+    private final UserMove userMove;
+    private final WinnerVerifier winnerVerifier;
+    private final DrawVerifier drawVerifier;
+
+    public Game(
+            final DataPrinter dataPrinter,
+            final ComputerMove computerMove,
+            final UserMove userMove,
+            final WinnerVerifier winnerVerifier,
+            final DrawVerifier drawVerifier
+    ) {
+        this.dataPrinter = dataPrinter;
+        this.computerMove = computerMove;
+        this.userMove = userMove;
+        this.winnerVerifier = winnerVerifier;
+        this.drawVerifier = drawVerifier;
+    }
+
     void play() {
         System.out.println("Use following mapping table to specify a cell using numbers from 1 to 9");
         dataPrinter.printMappingTable();
@@ -27,9 +46,9 @@ public class Game {
                 break;
             }
 
-            computerMove.make();
+            computerMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
-            if (winnerVerifier.isComputerWin) {
+            if (winnerVerifier.isComputerWin(gameTable)) {
                 System.out.println("Computer won!");
                 break;
             }
