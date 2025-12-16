@@ -1,4 +1,4 @@
-package com.java.assyl.tictactoe;
+package com.java.assyl.tictactoe.model;
 
 /**
  * @Assylzhan Baimuratov

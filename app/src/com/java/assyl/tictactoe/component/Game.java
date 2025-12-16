@@ -1,4 +1,6 @@
-package com.java.assyl.tictactoe;
+package com.java.assyl.tictactoe.component;
+
+import com.java.assyl.tictactoe.model.GameTable;
 
 import java.util.Random;
 
@@ -26,7 +28,7 @@ public class Game {
         this.drawVerifier = drawVerifier;
     }
 
-    void play() {
+    public void play() {
         System.out.println("Use following mapping table to specify a cell using numbers from 1 to 9");
         dataPrinter.printMappingTable();
         final GameTable gameTable = new GameTable();

@@ -1,4 +1,6 @@
-package com.java.assyl.tictactoe;
+package com.java.assyl.tictactoe.component;
+
+import com.java.assyl.tictactoe.model.GameTable;
 
 /**
  * @Assylzhan Baimuratov

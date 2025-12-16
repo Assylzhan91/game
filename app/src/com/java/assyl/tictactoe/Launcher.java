@@ -1,5 +1,7 @@
 package com.java.assyl.tictactoe;
 
+import com.java.assyl.tictactoe.component.*;
+
 /**
  * @Assylzhan Baimuratov
  **/
