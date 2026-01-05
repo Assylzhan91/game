@@ -58,7 +58,6 @@ public class Game {
                 System.out.println("Draw!");
                 break;
             }
-            break;
         }
         System.out.println("Game over!");
     }
