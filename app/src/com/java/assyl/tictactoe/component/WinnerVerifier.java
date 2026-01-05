@@ -6,7 +6,7 @@ import com.java.assyl.tictactoe.model.GameTable;
  * @Assylzhan Baimuratov
  **/
 public class WinnerVerifier {
-    public boolean isUserWin() {
+    public boolean isUserWin(final GameTable gameTable) {
         return false;
     }
 

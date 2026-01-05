@@ -39,11 +39,11 @@ public class Game {
         while (true) {
             userMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
-            if (winnerVerifier.isUserWin()) {
+            if (winnerVerifier.isUserWin(gameTable)) {
                 System.out.println("Congratulations! You won!");
                 break;
             }
-            if (drawVerifier.isDraw()) {
+            if (drawVerifier.isDraw(gameTable)) {
                 System.out.println("Draw!");
                 break;
             }
@@ -54,10 +54,11 @@ public class Game {
                 System.out.println("Computer won!");
                 break;
             }
-            if (drawVerifier.isDraw()) {
+            if (drawVerifier.isDraw(gameTable)) {
                 System.out.println("Draw!");
                 break;
             }
+            break;
         }
         System.out.println("Game over!");
     }
